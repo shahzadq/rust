@@ -1,3 +1,5 @@
+mod hello_world;
+mod formatted_print;
 fn main() {
-    println!("Hello, world!");
+    println!("rust")
 }
