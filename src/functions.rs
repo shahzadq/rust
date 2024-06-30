@@ -29,6 +29,7 @@ fn modify_arg(x: &mut f64) {
     *x = 1.0;
 }
 
+#[allow(dead_code)]
 fn main() {
     // let arg = 2.0;
     // let res = sqr_simplified(arg);

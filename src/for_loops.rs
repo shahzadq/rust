@@ -42,6 +42,7 @@ fn adding_float() {
     println!("sum: {}", sum);
 }
 
+#[allow(dead_code)]
 fn main() {
     adding_float();
 }
