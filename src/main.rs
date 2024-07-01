@@ -9,6 +9,7 @@ mod imports;
 mod iterators;
 mod maths;
 mod slices;
+mod strings;
 mod vectors;
 
 fn main() {

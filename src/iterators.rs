@@ -38,6 +38,10 @@ fn slice_windows() {
     for s in slice.windows(2) {
         println!("window: {:?}", s);
     }
+
+    for s in slice.chunks(2) {
+        println!("chunks: {:?}", s);
+    }
 }
 
 #[allow(dead_code)]
