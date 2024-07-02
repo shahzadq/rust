@@ -1,3 +1,4 @@
+mod args;
 mod arrays;
 mod assert_equals;
 mod comments;

@@ -76,7 +76,19 @@ fn multilingual() {
 }
 
 #[allow(dead_code)]
-fn whitespace_and_collect() {}
+fn whitespace_and_collect() {
+    let text = "the red fox and the lazy dog";
+    let words: Vec<&str> = text.split_whitespace().collect();
+
+    println!("text: {} is made up of words: {:?}", text, words);
+
+    let mut words = Vec::new();
+    words.extend(text.split_whitespace());
+
+    let stripped: String = text.chars().filter(|ch| !ch.is_whitespace()).collect();
+
+    println!("{:?}", stripped);
+}
 
 #[allow(dead_code)]
 fn main() {
