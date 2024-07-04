@@ -17,6 +17,15 @@ fn to_vec() {
 }
 
 #[allow(dead_code)]
+fn require() {
+    // require an integer arg to be passed or show some errors
+    let first = std::env::args().nth(1).expect("please supply an argument");
+    let n: i32 = first.parse().expect("not an integer");
+
+    println!("arg: {}", n);
+}
+
+#[allow(dead_code)]
 fn main() {
-    to_vec();
+    require();
 }

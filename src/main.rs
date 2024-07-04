@@ -2,6 +2,7 @@ mod args;
 mod arrays;
 mod assert_equals;
 mod comments;
+mod files;
 mod for_loops;
 mod formatted_print;
 mod functions;

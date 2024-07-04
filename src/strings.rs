@@ -76,6 +76,38 @@ fn multilingual() {
 }
 
 #[allow(dead_code)]
+fn multilingual_match() {
+    let multilingual = "Hi! ¡Hola! привет!";
+
+    match multilingual.find('п') {
+        Some(idx) => {
+            let hi = &multilingual[idx..];
+            println!("Russian hi: {}", hi)
+        }
+        None => println!("Couldnt find russian greeting..."),
+    }
+
+    // if not interested in faliure
+    if let Some(idx) = multilingual.find('п') {
+        println!("Russian hi: {}", &multilingual[idx..]);
+    }
+
+    // C like switch statement
+    // let text = match n {
+    //     0 => "zero",
+    //     1 => "one",
+    //     2 => "two",
+    //     _ => "many",
+    // };
+    // or as a range
+    // let text = match n {
+    //     0..3 => "small",
+    //     4..6 => "medium",
+    //     _ => "large"
+    // };
+}
+
+#[allow(dead_code)]
 fn whitespace_and_collect() {
     let text = "the red fox and the lazy dog";
     let words: Vec<&str> = text.split_whitespace().collect();
@@ -92,5 +124,5 @@ fn whitespace_and_collect() {
 
 #[allow(dead_code)]
 fn main() {
-    whitespace_and_collect();
+    multilingual_match();
 }
